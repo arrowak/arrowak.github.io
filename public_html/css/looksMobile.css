@@ -1,0 +1,472 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 Nov, 2015, 12:17:52 PM
+    Author     : arun
+*/
+/*Imports*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display+SC:900);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+/*Styling Helper Variables*/
+/*Generic Stying Helper classes*/
+.fatFont, .secTopIntro {
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Playfair Display SC', serif; }
+
+.veryBigFont, .secTopIntro {
+  font-size: 230%; }
+
+.darkEngravedFont, .secTopIntro {
+  color: #444;
+  text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+  /* 50% white from bottom */ }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  width: 100%;
+  height: 100%;
+  background: url("../images/old_moon.png");
+  font-family: 'Open Sans', sans-serif !important; }
+
+/*Loader Styling*/
+.loader {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: none; }
+  .loader .loaderContent {
+    width: 70%;
+    height: fit-content;
+    padding: 10pt;
+    vertical-align: middle;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bolder;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 10px 0px black;
+    -webkit-box-shadow: inset 0px 0px 10px 0px black;
+    -moz-box-shadow: inset 0px 0px 10px 0px black;
+    -o-box-shadow: inset 0px 0px 10px 0px black; }
+
+.landscapeMode {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: none; }
+  .landscapeMode .pink {
+    color: #A20F16;
+    font-weight: bolder; }
+  .landscapeMode .landscapeModeContent {
+    width: 90%;
+    height: fit-content;
+    padding: 10pt;
+    vertical-align: middle;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bolder;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 10px 0px black;
+    -webkit-box-shadow: inset 0px 0px 10px 0px black;
+    -moz-box-shadow: inset 0px 0px 10px 0px black;
+    -o-box-shadow: inset 0px 0px 10px 0px black; }
+
+/* Top Bar Styling */
+.topBar {
+  position: fixed;
+  top: 0pt;
+  left: 0pt;
+  width: 100%;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.7); }
+
+.mobileMenuHamburger {
+  display: block;
+  position: fixed;
+  top: -5pt;
+  right: 5%;
+  font-size: 2em;
+  color: white; }
+  .mobileMenuHamburger:before {
+    content: '\2261'; }
+
+/* Logo Styling */
+.logo {
+  width: 100%;
+  padding: 5pt;
+  left: 0pt;
+  top: 0pt;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Courgette', cursive;
+  z-index: 3;
+  font-size: +1.25em;
+  cursor: pointer; }
+
+/* Menu Styling */
+#myMenu {
+  list-style-type: none;
+  list-style: none;
+  z-index: 9;
+  position: relative;
+  display: none; }
+  #myMenu.active {
+    display: block; }
+  #myMenu li {
+    z-index: 9;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 5pt solid rgba(255, 255, 255, 0.5);
+    width: 24%;
+    padding: 5pt 0pt; }
+    #myMenu li a {
+      z-index: 9;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9); }
+    #myMenu li.active {
+      border-bottom: 5pt solid #A20F16; }
+
+/* Couple Styling */
+.secBGImages img {
+  height: auto;
+  width: 49%; }
+
+.secTopIntro {
+  width: 100%; }
+  .secTopIntro .txtGettingMarried {
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 25pt;
+    font-family: 'Courgette', cursive; }
+    .secTopIntro .txtGettingMarried .pink {
+      color: #A20F16;
+      font-size: 25pt;
+      font-family: 'Pacifico', cursive;
+      /*text-decoration: underline;*/ }
+  .secTopIntro .txtInvited {
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 25pt;
+    font-family: 'Courgette', cursive; }
+    .secTopIntro .txtInvited .pink {
+      color: #A20F16;
+      font-size: 25pt;
+      font-family: 'Pacifico', cursive;
+      /*text-decoration: underline;*/ }
+
+/*When Section Styling*/
+.secWhen {
+  text-align: center;
+  font-size: 15pt; }
+  .secWhen .txtWhen {
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: 'Open Sans', cursive; }
+  .secWhen .txtEvent {
+    margin-bottom: 50pt;
+    font-family: 'Open Sans', cursive;
+    color: #A20F16;
+    font-size: 15pt;
+    font-weight: bolder; }
+  .secWhen .calendar {
+    margin: 0px auto;
+    border-collapse: collapse;
+    border: 1px solid #0000FF;
+    box-shadow: 1pt 10pt 30pt 1pt black; }
+    .secWhen .calendar tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit; }
+      .secWhen .calendar tbody tr:nth-child(2) {
+        background-color: #E0ECFF;
+        border: 1px solid #C0C0C0; }
+    .secWhen .calendar .calendarheader {
+      font-weight: bold;
+      background-color: #3E3E3E;
+      border: 1px solid #C0C0C0;
+      color: whitesmoke; }
+    .secWhen .calendar .calendarheader1 {
+      background-color: #515354;
+      font-size: 10pt;
+      border: 1px solid #C0C0C0;
+      color: whitesmoke; }
+    .secWhen .calendar .calendarbody {
+      border: 1px solid #C0C0C0;
+      background: white;
+      height: 25pt; }
+      .secWhen .calendar .calendarbody.active {
+        background: #A20F16;
+        color: white;
+        font-weight: bolder; }
+
+.secWhere {
+  text-align: center; }
+  .secWhere #aBookBus {
+    cursor: pointer;
+    display: inline;
+    color: #A20F16;
+    font-weight: bolder; }
+    .secWhere #aBookBus img {
+      vertical-align: middle;
+      width: 25pt; }
+  .secWhere .txtWhere {
+    font-size: 15pt;
+    font-weight: bold; }
+  .secWhere .txtTravel {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7); }
+  .secWhere .txtLocation {
+    color: #A20F16;
+    margin-top: 20pt;
+    margin-bottom: 40pt; }
+    .secWhere .txtLocation .pink {
+      color: #000;
+      font-size: 10pt;
+      text-decoration: underline;
+      font-weight: bolder; }
+  .secWhere #map {
+    text-align: center;
+    margin: 0px auto;
+    width: 95%;
+    height: 40%; }
+
+.secContact {
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold; }
+  .secContact .txtConfusion {
+    font-size: 20pt; }
+  .secContact .txtCallMe {
+    margin-top: 10pt; }
+  .secContact .contactContainer {
+    margin: 0px auto;
+    margin-top: 6%;
+    background: rgba(0, 0, 0, 0.15);
+    width: 60%;
+    padding: 20pt;
+    box-shadow: inset 0px 0px 10px 0px black;
+    -webkit-box-shadow: inset 0px 0px 10px 0px black;
+    -moz-box-shadow: inset 0px 0px 10px 0px black;
+    -o-box-shadow: inset 0px 0px 10px 0px black; }
+    .secContact .contactContainer .txtEmailDetails a {
+      text-decoration: underline;
+      display: block; }
+      .secContact .contactContainer .txtEmailDetails a.white {
+        color: #A20F16; }
+    .secContact .contactContainer .txtPhoneDetails {
+      margin-top: 20pt; }
+      .secContact .contactContainer .txtPhoneDetails a {
+        text-decoration: underline;
+        display: block; }
+        .secContact .contactContainer .txtPhoneDetails a.white {
+          color: #A20F16; }
+
+/*Transition Effects Styling*/
+.animated.infinite {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; }
+.animated.linear {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+/*Pulse Transitions*/
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse; }
+
+/*Fade Transitions*/
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.2; }
+  100% {
+    opacity: 1; } }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.2; }
+  100% {
+    opacity: 1; } }
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade; }
+
+/*FadeIn Transitions*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft; }
+
+/*FadeOut Transitions*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px); } }
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0px); }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px); } }
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px); } }
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0px); }
+  100% {
+    opacity: 0;
+    transform: translateX(20px); } }
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px); } }
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0px); }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px); } }
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px); } }
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0px); }
+  100% {
+    opacity: 0;
+    transform: translateY(20px); } }
+
+/*# sourceMappingURL=looksMobile.css.map */
