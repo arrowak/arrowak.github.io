@@ -325,13 +325,13 @@ h1 {
     .secContact .contactContainer .txtEmailDetails a {
       text-decoration: underline; }
       .secContact .contactContainer .txtEmailDetails a.white {
-        color: white; }
+        color: #A20F16; }
     .secContact .contactContainer .txtPhoneDetails {
       margin-top: 20pt; }
       .secContact .contactContainer .txtPhoneDetails a {
         text-decoration: underline; }
         .secContact .contactContainer .txtPhoneDetails a.white {
-          color: white; }
+          color: #A20F16; }
 
 /*Transition Effects Styling*/
 .animated.infinite {
