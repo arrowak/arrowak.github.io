@@ -17,7 +17,6 @@ $(document).ready(function() {
     });
 
     $('.fullscreen').fullpage({
-        //sectionsColor: ['rgba(0,0,0,0)', '#4BBFC3', '#7BAABE', '#EB7260', '#000'],
         sectionsColor: ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)'],
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
         menu: '#myMenu',
@@ -25,8 +24,16 @@ $(document).ready(function() {
 
         }
     });
-
-    $(window).on("orientationchange", function() {
+    function orientation_change() {
+        setTimeout(function() {
+            if (screen.height < screen.width) {
+                showLandscapeAlert();
+            } else {
+                hideLandscapeAlert();
+            }
+        }, 1000);
+    }
+    window.addEventListener("orientationchange", function() {
         setTimeout(function() {
             if (screen.height < screen.width) {
                 showLandscapeAlert();
@@ -35,6 +42,7 @@ $(document).ready(function() {
             }
         }, 1000);
     });
+
 
     $('.logo').click(function() {
         $.fn.fullpage.moveTo('firstPage');

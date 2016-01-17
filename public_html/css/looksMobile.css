@@ -111,7 +111,8 @@ body {
   font-size: 2em;
   color: white; }
   .mobileMenuHamburger:before {
-    content: '\2261'; }
+    content: '\2261';
+    vertical-align: middle; }
 
 /* Logo Styling */
 .logo {

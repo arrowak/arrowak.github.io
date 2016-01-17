@@ -130,9 +130,10 @@ body{
     right: 5%;
     font-size: 2em;
     color: white;
-
+    
     &:before{
         content: '\2261';
+        vertical-align: middle;
     }
 }
 
