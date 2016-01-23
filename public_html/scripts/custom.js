@@ -83,6 +83,9 @@ $(document).ready(function() {
                     }
                 });
 
+                if(cityKey == "122_1") {
+                    cityKey = 122;
+                }
                 if (cityKey == "0") {
                     alert("Looks like there are no buses from your location to Belgaum. Please contact me.");
                     hideLoader();
